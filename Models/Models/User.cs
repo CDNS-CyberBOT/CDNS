@@ -4,19 +4,21 @@
     {
         public User()
         {
-            DiscordId = 0;
-            Name = string.Empty;
+            Id = 0;
+            Username = string.Empty;
             Email = string.Empty;
             Discriminator = string.Empty;
-            AvatarHash = string.Empty;
+            Avatar = string.Empty;
             AvatarUrl = string.Empty;
+            GuildsString = string.Empty;
         }
 
-        public ulong DiscordId { get; set; }
-        public string Name { get; set; }
+        public ulong Id { get; set; }
+        public string Username { get; set; }
         public string Email { get; set; }
         public string Discriminator { get; set; }
-        public string AvatarHash { get; set; }
+        public string Avatar { get; set; }
         public string AvatarUrl { get; set; }
+        public string GuildsString { get; set; }
     }
 }

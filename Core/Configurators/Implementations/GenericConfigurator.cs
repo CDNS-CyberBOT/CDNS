@@ -1,7 +1,7 @@
-﻿using CDNS.DAL.Core.Configurators.Interfaces;
+﻿using DAL.Core.Configurators.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
-namespace CDNS.DAL.Core.Configurators.Implementations
+namespace DAL.Core.Configurators.Implementations
 {
     public abstract class GenericConfigurator<T> : IGenericConfigurator<T> where T : class
     {

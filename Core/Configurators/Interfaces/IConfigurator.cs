@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace CDNS.DAL.Core.Configurators.Interfaces
+namespace DAL.Core.Configurators.Interfaces
 {
     public interface IConfigurator
     {

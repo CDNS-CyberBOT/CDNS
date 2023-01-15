@@ -1,7 +1,7 @@
-﻿using CDNS.DAL.Core.Configurators;
+﻿using DAL.Core.Configurators;
 using Microsoft.EntityFrameworkCore;
 
-namespace CDNS.DAL.Core
+namespace DAL.Core
 {
     public class DatabaseContext : DbContext
     {

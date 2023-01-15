@@ -1,6 +1,6 @@
-﻿using CDNS.DAL.Core.Configurators.Interfaces;
+﻿using DAL.Core.Configurators.Interfaces;
 
-namespace CDNS.DAL.Core.Configurators
+namespace DAL.Core.Configurators
 {
     internal static class ConfiguratorProvider
     {

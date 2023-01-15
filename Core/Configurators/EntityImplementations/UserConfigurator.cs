@@ -1,8 +1,8 @@
-﻿using CDNS.DAL.Core.Configurators.Implementations;
-using CDNS.DAL.Models.Models;
+﻿using DAL.Core.Configurators.Implementations;
+using DAL.Models.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace CDNS.DAL.Core.Configurators.EntityImplementations
+namespace DAL.Core.Configurators.EntityImplementations
 {
     public class UserConfigurator : GenericConfigurator<User>
     {

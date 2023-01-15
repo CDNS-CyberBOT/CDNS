@@ -1,4 +1,6 @@
-﻿namespace CDNS.DAL.Models.Models
+﻿using DAL.Models.Models.Tickets;
+
+namespace DAL.Models.Models
 {
     public class User
     {
@@ -20,5 +22,10 @@
         public string Avatar { get; set; }
         public string AvatarUrl { get; set; }
         public string GuildsString { get; set; }
+
+        public virtual List<Warn>? Warns { get; set; }
+        public virtual List<Warn>? WarnsWhereAuthor { get; set; }
+        public virtual List<Guild>? GuildsWhereOwner { get; set; }
+        public virtual List<Ticket>? TicketsWhereOwner { get; set; }
     }
 }

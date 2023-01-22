@@ -12,9 +12,9 @@ namespace DAL.Core.Configurators.EntityImplementations
         {
             base.Configure(modelBuilder);
 
-            modelBuilder.Entity<Guild>().HasKey(g => g.DiscordId);
-            modelBuilder.Entity<Guild>().HasIndex(g => g.DiscordId).IsUnique();
-            modelBuilder.Entity<Guild>().Property(g => g.DiscordId).IsRequired();
+            modelBuilder.Entity<Guild>().HasKey(g => g.Id);
+            modelBuilder.Entity<Guild>().HasIndex(g => g.Id).IsUnique();
+            modelBuilder.Entity<Guild>().Property(g => g.Id).IsRequired();
 
             modelBuilder.Entity<Guild>().Property(g => g.Name).IsRequired();
 
@@ -30,10 +30,8 @@ namespace DAL.Core.Configurators.EntityImplementations
 
             modelBuilder.Entity<Guild>().Property(g => g.IsGuildPremium).IsRequired();
 
-            modelBuilder.Entity<Guild>().Property(g => g.IsTicketSystemEnabled).IsRequired();
-
-            modelBuilder.Entity<Guild>().Property(g => g.IconHash).IsRequired();
-            modelBuilder.Entity<Guild>().Property(g => g.IconUrl).IsRequired();
+            modelBuilder.Entity<Guild>().Property(g => g.IconHash);
+            modelBuilder.Entity<Guild>().Property(g => g.IconUrl);
 
             modelBuilder.Entity<Guild>().Property(g => g.WarnDuration).IsRequired();
         }

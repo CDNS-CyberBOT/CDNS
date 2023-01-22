@@ -19,13 +19,11 @@ namespace DAL.Core.Configurators.EntityImplementations
                 .HasOne(l => l.Guild)
                 .WithOne(l => l.LoggingOptions)
                 .HasPrincipalKey<LoggingOptions>(l => l.GuildId)
-                .HasForeignKey<Guild>(g => g.DiscordId)
+                .HasForeignKey<Guild>(g => g.Id)
                 .IsRequired()
                 .OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<LoggingOptions>().Property(l => l.ChannelId).IsRequired();
-
-            modelBuilder.Entity<LoggingOptions>().Property(l => l.IsEnabled).IsRequired();
         }
     }
 }

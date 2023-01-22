@@ -4,6 +4,8 @@
     {
         public TicketOptions()
         {
+            IsEnabled = false;
+
             SupportTeamRoles = string.Empty;
             AdditionalRoles = string.Empty;
 
@@ -25,6 +27,8 @@
         }
 
         public int Id { get; set; }
+
+        public bool IsEnabled { get; set; }
 
         public string SupportTeamRoles { get; set; }
         public string AdditionalRoles { get; set; }

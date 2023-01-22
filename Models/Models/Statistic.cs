@@ -8,13 +8,15 @@
 
         public ulong CategoryId { get; set; }
         
-        public bool IsEnabled { get; set; }
         public int Users { get; set; }
         public ulong UsersCountChannelId { get; set; }
+
         public int Boosts { get; set; }
         public ulong BoostsCountChannelId { get; set; }
+
         public int Bots { get; set; }
         public ulong BotsCountChannelId { get; set; }
+
         public int Roles { get; set; }
         public ulong RolesCountChannelId { get; set; }
     }

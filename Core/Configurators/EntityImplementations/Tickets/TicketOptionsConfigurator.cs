@@ -16,6 +16,8 @@ namespace DAL.Core.Configurators.EntityImplementations.Tickets
             modelBuilder.Entity<TicketOptions>().HasIndex(to => to.Id).IsUnique();
             modelBuilder.Entity<TicketOptions>().Property(to => to.Id).IsRequired().ValueGeneratedOnAdd();
 
+            modelBuilder.Entity<TicketOptions>().Property(to => to.IsEnabled).IsRequired();
+
             modelBuilder.Entity<TicketOptions>().Property(to => to.SupportTeamRoles).IsRequired().HasDefaultValue(string.Empty);
 
             modelBuilder.Entity<TicketOptions>().Property(to => to.AdditionalRoles).IsRequired().HasDefaultValue(string.Empty);
@@ -41,7 +43,7 @@ namespace DAL.Core.Configurators.EntityImplementations.Tickets
             modelBuilder.Entity<TicketOptions>()
                 .HasOne(to => to.Guild)
                 .WithOne(g => g.TicketOptions)
-                .HasPrincipalKey<Guild>(g => g.DiscordId)
+                .HasPrincipalKey<Guild>(g => g.Id)
                 .HasForeignKey<TicketOptions>(to => to.GuildId)
                 .OnDelete(DeleteBehavior.Cascade)
                 .IsRequired();

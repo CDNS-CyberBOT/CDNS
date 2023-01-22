@@ -19,14 +19,12 @@ namespace DAL.Core.Configurators.EntityImplementations
                 .HasOne(s => s.Guild)
                 .WithOne(g => g.Statistic)
                 .HasPrincipalKey<Statistic>(s => s.GuildId)
-                .HasForeignKey<Guild>(g => g.DiscordId)
+                .HasForeignKey<Guild>(g => g.Id)
                 .OnDelete(DeleteBehavior.Restrict)
                 .IsRequired();
 
             modelBuilder.Entity<Statistic>().Property(s => s.CategoryId).IsRequired().HasDefaultValue(0);
-
-            modelBuilder.Entity<Statistic>().Property(s => s.IsEnabled).IsRequired();
-
+            
             modelBuilder.Entity<Statistic>().Property(s => s.Users).IsRequired().HasDefaultValue(0);
             modelBuilder.Entity<Statistic>().Property(s => s.UsersCountChannelId).IsRequired().HasDefaultValue(0);
 

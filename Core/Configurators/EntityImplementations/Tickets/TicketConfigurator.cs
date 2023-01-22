@@ -29,7 +29,7 @@ namespace DAL.Core.Configurators.EntityImplementations.Tickets
             modelBuilder.Entity<Ticket>()
                 .HasOne(t => t.Guild)
                 .WithMany(g => g.Tickets)
-                .HasPrincipalKey(g => g.DiscordId)
+                .HasPrincipalKey(g => g.Id)
                 .HasForeignKey(t => t.GuildId)
                 .OnDelete(DeleteBehavior.Restrict)
                 .IsRequired();

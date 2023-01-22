@@ -18,14 +18,12 @@ namespace DAL.Core.Configurators.EntityImplementations
             modelBuilder.Entity<VoiceChannelOptions>()
                 .HasOne(vco => vco.Guild)
                 .WithOne(g => g.VoiceChannelOptions)
-                .HasPrincipalKey<Guild>(g => g.DiscordId)
+                .HasPrincipalKey<Guild>(g => g.Id)
                 .HasForeignKey<VoiceChannelOptions>(vco => vco.GuildId)
                 .IsRequired()
                 .OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<VoiceChannelOptions>().Property(vco => vco.ChannelId).IsRequired().HasDefaultValue(0);
-
-            modelBuilder.Entity<VoiceChannelOptions>().Property(vco => vco.IsEnabled).IsRequired();
         }
     }
 }

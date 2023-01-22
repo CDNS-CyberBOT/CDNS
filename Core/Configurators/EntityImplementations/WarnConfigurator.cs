@@ -28,7 +28,7 @@ namespace DAL.Core.Configurators.EntityImplementations
             modelBuilder.Entity<Warn>()
                 .HasOne(w => w.Guild)
                 .WithMany(g => g.WarnsOfServer)
-                .HasPrincipalKey(g => g.DiscordId)
+                .HasPrincipalKey(g => g.Id)
                 .HasForeignKey(w => w.GuildId)
                 .OnDelete(DeleteBehavior.Restrict)
                 .IsRequired();

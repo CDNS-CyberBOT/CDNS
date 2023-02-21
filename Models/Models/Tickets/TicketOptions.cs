@@ -14,7 +14,7 @@
             IsAutoPinTicket = true;
 
             CategoryForCreatedOpenedTickets = 0;
-            CategoryForCreatedOpenedTickets = 0;
+            CategoryForClosedTickets = 0;
 
             OpenedTicketName = "ticket-{count}";
             ClosedTicketName = "closed-{count}";

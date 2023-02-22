@@ -18,7 +18,7 @@ namespace DAL.Models.Models
         public string Name { get; set; }
         public ulong OwnerId { get; set; }
         public virtual User? Owner { get; set; }
-        
+
         public bool IsGuildAvailable { get; set; }
 
         public bool IsGuildPremium { get; set; }
@@ -27,7 +27,7 @@ namespace DAL.Models.Models
         public string? IconUrl { get; set; }
 
         public int WarnDuration { get; set; }
-        
+
         public virtual TicketOptions? TicketOptions { get; set; }
         public virtual Statistic? Statistic { get; set; }
         public virtual VoiceChannelOptions? VoiceChannelOptions { get; set; }
